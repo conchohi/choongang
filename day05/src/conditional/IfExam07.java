@@ -32,7 +32,7 @@ public class IfExam07 {
 			recommend = "동해";
 		} else {
 			System.out.println("산, 바다 중 하나를 입력하세요.");
-			return;
+			System.exit(0);
 		}
 		System.out.println("당신이 선택한 여행 희망지는 '" + wishTravle + "'입니다.");
 		System.out.println("당신에게 추천하는 곳은 '" + recommend + "'입니다.");

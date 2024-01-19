@@ -8,11 +8,7 @@ public class MemberService {
 	}
 	
 	public boolean login(String id, String password) {
-		if(id.equals(this.id) && password.equals(this.password)) {
-			return true;
-		} else {
-			return false;
-		}
+		return (id.equals(this.id) && password.equals(this.password));
 	}
 	
 	public void logout(String id) {

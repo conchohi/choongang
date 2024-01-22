@@ -9,6 +9,12 @@ public class Exam06 {
 		System.out.println("숫자를 입력하세요 >> ");
 		int num = sc.nextInt();
 		
+		printNumArray(num);
+		
+		sc.close();
+	}
+	
+	public static void printNumArray(int num) {
 		int count = 1;
 		for(int i = 0; i < num; i++) {
 			System.out.print((i+1) + "=>");
@@ -18,7 +24,6 @@ public class Exam06 {
 			}
 			System.out.println();
 		}
-		sc.close();
 	}
 
 }

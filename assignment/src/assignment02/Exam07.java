@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Exam07 {
 
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		int[] scores = null;
 		int studentNum = 0;
 		
@@ -26,29 +26,15 @@ public class Exam07 {
 			} else if(studentNum == 0) {
 				System.out.println("학생 수 먼저 입력해주세요.");
 			} else if(option == 2) {
-				for(int i = 0; i < studentNum; i++) {
-					System.out.printf((i+1) + "번째 학생 점수 입력 >> ");
-					scores[i] = sc.nextInt();
-				}
+				inputScore(scores);
 			} else if(option == 3) {
-				for(int i = 0; i < studentNum; i++) {
-					System.out.println((i+1) + "번 학생 점수 = " + scores[i]);
-				}
+				printScore(scores);
 			} else if(option == 4) {
-				int max = scores[0];
-				int min = scores[0];
-				int sum = 0;
+				int max = getMax(scores);
+				int min = getMin(scores);
+				int sum = getSum(scores);
 				double avg = 0.0;
-				
-				for(int i = 0; i < studentNum; i++) {
-					if(max < scores[i]) {
-						max = scores[i];
-					} 
-					if(min > scores[i]) {
-						min = scores[i];
-					}
-					sum += scores[i];
-				}
+
 				avg = (double)sum / studentNum;
 				System.out.println("최고 점수 : " + max);
 				System.out.println("최저 점수 : " + min);
@@ -60,5 +46,44 @@ public class Exam07 {
 		
 		sc.close();
 	}//end of main
+	public static int getMax(int[] arr) {
+		int max = Integer.MIN_VALUE;
+		
+		for(int n : arr) {
+			if(max < n) {
+				max = n;
+			}
+		}
+		return max;
+	}
+	
+	public static int getMin(int[] arr) {
+		int min = Integer.MAX_VALUE;
+		
+		for(int n : arr) {
+			if(min > n) {
+				min = n;
+			}
+		}
+		return min;
+	}
+	public static int getSum(int[] arr) {
+		int sum = 0;
+		for(int n : arr) {
+			sum += n;
+		}
+		return sum;
+	}
+	public static void inputScore(int[] scores) {
+		for(int i = 0; i < scores.length; i++) {
+			System.out.printf((i+1) + "번째 학생 점수 입력 >> ");
+			scores[i] = sc.nextInt();
+		}
+	}
+	public static void printScore(int[] scores) {
+		for(int i = 0; i < scores.length; i++) {
+			System.out.println((i+1) + "번 학생 점수 = " + scores[i]);
+		}
+	}
 
 }

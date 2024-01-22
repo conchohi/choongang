@@ -12,15 +12,29 @@ public class Exam02_2 {
 		int target = sc.nextInt();
 		sc.close();
 		
-		for(int i = 0; i < score.length; i++) {
-			if(target == score[i]) {
-				System.out.println("찾는 값 : " + target);
-				System.out.println("배열의 요소 위치 : " + i);
-				System.exit(0);
+		if(isExist(score,target)) {
+			System.out.println("찾는 값 : " + target);
+			System.out.println("배열의 요소 위치 : " + getIndex(score, target));
+		} else {
+		System.out.println("찾는 값이 없습니다.");
+		}
+	}
+	
+	public static boolean isExist(int[] arr, int target) {
+		for(int num : arr) {
+			if(num == target) {
+				return true;
 			}
 		}
-		System.out.println("찾는 값이 없습니다.");
-
+		return false;
+	}
+	public static int getIndex(int[] arr, int target) {
+		for(int i = 0; i < arr.length; i++) {
+			if(target == arr[i]) {
+				return i;
+			}
+		}
+		return 0;
 	}
 
 }

@@ -1,6 +1,6 @@
 package staticmember.exam2;
 
-public class Sales{
+public class Sales extends Department{
 	private static int salesTotal;
 	private String name;
 	private int salary;
@@ -13,6 +13,7 @@ public class Sales{
 		this.extra = extra;
 		totalSalary = salary + extra;
 		salesTotal += totalSalary;
+		super.total += totalSalary;
 	}
 	
 	public void printInfo() {

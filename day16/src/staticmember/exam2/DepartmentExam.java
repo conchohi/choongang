@@ -45,7 +45,7 @@ public class DepartmentExam {
 		}
 		System.out.println("부서 합계 : " + Planning.getPlanningTotal());
 		System.out.println("-------------------------------------");
-		System.out.println("전체 합계 : " + (Sales.getSalesTotal()+Planning.getPlanningTotal()));
+		System.out.println("전체 합계 : " + Department.getTotal());
 		sc.close();
 		
 	}

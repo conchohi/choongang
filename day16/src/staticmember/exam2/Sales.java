@@ -13,7 +13,7 @@ public class Sales extends Department{
 		this.extra = extra;
 		totalSalary = salary + extra;
 		salesTotal += totalSalary;
-		super.total += totalSalary;
+//		super.total += totalSalary;
 	}
 	
 	public void printInfo() {

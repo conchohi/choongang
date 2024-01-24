@@ -12,7 +12,7 @@ public class Planning extends Department{
 		this.salary = salary;
 		this.extra = extra;
 		totalSalary = salary + extra;
-		super.total += totalSalary;
+//		super.total += totalSalary;
 		planningTotal += totalSalary;
 	}
 	

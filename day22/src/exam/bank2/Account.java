@@ -1,4 +1,6 @@
-package day21.exam.bank;
+package exam.bank2;
+
+import java.text.DecimalFormat;
 
 public class Account {
 	//#1. 필드
@@ -15,6 +17,7 @@ public class Account {
 	
 	//#3. 메소드
 	
+	//toString() 오버라이딩
 	@Override
 	public String toString() {
 		return accountNo + ", " + owner + ", " + balance;
@@ -35,10 +38,31 @@ public class Account {
 	}
 	
 	public void showInfo() {
-		System.out.println(accountNo + "\t" + owner + "\t" + balance);
+		DecimalFormat f = new DecimalFormat("#,##0원");
+		System.out.println(accountNo + "\t" + owner + "\t" + f.format(balance));
 	}
 	
 	public String getAccountNo() {
 		return accountNo;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
 	}
 }

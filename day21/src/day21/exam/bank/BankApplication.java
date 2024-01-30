@@ -3,11 +3,12 @@ package day21.exam.bank;
 import java.util.Scanner;
 
 public class BankApplication {
-	public static Account[] accounts = new Account[100];
+	//Scanner 객체 생성
+	private static Scanner sc = new Scanner(System.in);
+	//계좌를 담을 배열 - 모든 메소드에서 공통으로 사용
+	private static Account[] accounts = new Account[100];
 	
 	public static void main(String[] args) {
-		//Scanner 객체 생성
-		Scanner sc = new Scanner(System.in);
 		
 		while(true) {
 			System.out.println("=================================");
@@ -63,11 +64,12 @@ public class BankApplication {
 			} else {
 				System.out.println("1 ~ 5까지 숫자 중 하나를 입력하세요.");
 			}
-		}
+		}//end of while
 		sc.close();
 		
 	}//end of main
 	
+	//1.계좌 생성
 	private static void createAccount(Account account) {
 		int idx = getEmptyIndex();
 		
@@ -79,6 +81,7 @@ public class BankApplication {
 		}
 	}
 	
+	//2. 계좌 리스트
 	private static void accountList() {
 		System.out.println("계좌번호\t계좌주\t잔액");
 		System.out.println("=====================");
@@ -87,7 +90,8 @@ public class BankApplication {
 		}
 	}
 	
-	public static void deposit(String AccountNumber, int amount) {
+	//3.예금
+	private static void deposit(String AccountNumber, int amount) {
 		Account account = findAccount(AccountNumber);
 		
 		if(account == null) {
@@ -96,7 +100,9 @@ public class BankApplication {
 			account.deposit(amount);;
 		}
 	}
-	public static void withdraw(String AccountNumber, int amount) {
+	
+	//4.출금
+	private static void withdraw(String AccountNumber, int amount) {
 		Account account = findAccount(AccountNumber);
 		
 		if(account == null) {
@@ -115,9 +121,10 @@ public class BankApplication {
 		return -1;
 	}
 	
+	
 	private static Account findAccount(String accountNumber) {
 		for(int i = 0; i < accounts.length; i++) {
-			if(accounts[i].getAccountNumber().equals(accountNumber)) {
+			if(accounts[i].getAccountNo().equals(accountNumber)) {
 				return accounts[i];
 			}
 		}

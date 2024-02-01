@@ -5,10 +5,15 @@ import java.util.Scanner;
 public class ShapeMain {
 
 	public static void main(String[] args) {
+		//#1. Scanner 객체 생성
 		Scanner sc = new Scanner(System.in);
-		Shape shape;
+		
+		//#2. 지역 변수 - main 메소드 안에서 선언
+		Shape shape = null;
 		
 		while(true) {
+			//그리려는 도형을 선택 -> 선의 길이
+			//선택한 도형에 해당하는 객체 생성
 			System.out.println("==============================");
 			System.out.println("0.종료|1.점|2.수직선|3.수평선|4.사각형");
 			System.out.println("==============================");

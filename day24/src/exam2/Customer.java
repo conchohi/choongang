@@ -3,14 +3,15 @@ package exam2;
 public abstract class Customer {
 	private String id; //고객 아이디
 	private String name; //고객 이름
-	private String grade; //등급
+	private Grade grade; //등급
+	
+	//고객과 포인트 적립 할인 별개 클래스로 분리 가능
 	private int point; //보너스 포인트
 	int paymentAmount;	//결제 금액
 	double ratio;		//적립 비율
 	private double discountRate; //할인율
 	
-	public Customer(String id, String name, String grade, double ratio, double discountRate) {
-		super();
+	public Customer(String id, String name, Grade grade, double ratio, double discountRate) {
 		this.id = id;
 		this.name = name;
 		this.grade = grade;
@@ -37,7 +38,10 @@ public abstract class Customer {
 		
 		calcPrice(price);
 		System.out.println(name + "님의 총 결제금액은 " + paymentAmount + "입니다.");
-		
 		System.out.println();
+	}
+	
+	public String getId() {
+		return id;
 	}
 }

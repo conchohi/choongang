@@ -1,7 +1,6 @@
 package stringexam;
 
 import java.util.Arrays;
-import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 public class StringBuilderExam {

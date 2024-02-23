@@ -1,0 +1,245 @@
+/* 전체를 감싸는 부분 */
+.wrap{
+    width: 100%;
+}
+
+/* 헤드라인 부분(topContainer) */
+.topContainer{
+    width: 100%;
+    height: 120px;
+    position: relative;
+    margin-bottom: 10px;
+    /* background-color: antiquewhite; 크기 확인용 */
+}
+    /* 1. 로고 부분 */
+
+.topLogo{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+a.logo{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 300px;
+    overflow: hidden; /* 자식에서 float 속성 */
+    display: block;
+}
+a.logo>img{
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin-right: 10px
+}
+a.logo>h1{
+    height: 60px;
+    line-height: 60px;
+    float: left;
+    font-size: 1.8rem;
+    color: darkslateblue;
+    
+}
+/* 2. 네비게이션, 로그인, 회원가입, 사이트맵 */
+nav.topNav{
+    text-align: right;
+}
+nav.topNav li{
+    display: inline-block;
+    margin-top: 5px;
+}
+nav.topNav li>a{
+    display: block;
+    padding: 7px 5px;
+    font-size: 0.8rem;
+}
+nav.topNav li>a:hover{
+    border: 1px solid black;
+}
+/* 3. 메인 메뉴 */
+nav.mainNav{
+    position: absolute;
+    bottom: 0px;
+    left: 140px;
+    /* background-color: aqua; */
+}
+nav.mainNav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav.mainNav li>a{
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 0px 5px;
+}
+nav.mainNav li>a:hover{
+    border: 1px solid black;
+}
+/* 경계선 */
+hr{
+    color: darkslateblue;
+    margin-bottom: 10px;
+    border: 1px solid darkslateblue;
+}
+/* 검색 부분 */
+div.search{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 3px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 5px;
+}
+/* 자료검색, 강좌검색 */
+h2{
+    font-size: 1.2rem;
+}
+div.search>form>{
+    overflow: hidden;
+}
+div.search>form>div{
+    display: inline-block;
+    width: 200px;
+    margin-right: 5px;
+}
+div.search>form>div span{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+div.search>form>input[name="textSearch"]{
+    height: 25px;
+    width: 290px;
+    padding-left: 5px;
+    margin-right: 10px;
+}
+/* 배너 */
+div.banner{
+    width: 100%;
+    margin-bottom: 10px;
+}
+div.banner>img{
+    width: 100%;
+}
+/* 코스 설명 부분 */
+div.courseInfo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin-bottom: 10px;
+}
+div.courseInfo>a{
+    display: inline-block;
+}
+div.courseInfo img{
+    box-sizing: border-box;
+    width: 240px;
+}
+
+/* 탭 메뉴, 공지사항, 문화행사, 책바다 */
+div.mainInfo{
+    width: 100%;
+    box-sizing: border-box; /* border padding 포함한 width, height */
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* 탭 부분 */
+div.tabMenu{
+    width: 600px;
+    height: 100%;
+    margin-right: 20px;
+}
+
+/* 탭 제목 부분 */
+div.tabTitle{
+    height: 36px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+/* 제목 버튼 부분 */
+div.tabTitle>button{
+    width: 100px;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer; /* 마우스 포인터 */
+    padding: 10px;
+    transition: 0.3s; /* 하나의 스타일이 완전히 다른 스타일로 바뀌는 시간 */
+    font-size: 12px;
+}
+div.tabTitle>button:hover{
+    background-color: #ddd;
+}
+div.tabTitle>button:active{
+    background-color: #ccc;
+}
+/* 탭 페이지 부분 */
+div.tabPage{
+    box-sizing: border-box;
+    height: 369px;
+    display: none; /* 숨기고 자리까지 없어짐 */
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+div.tablinkInit{
+    display: block;
+}
+
+/* 책 이미지 부분 */
+div.bookInfo{
+    box-sizing: border-box;
+    width: 340px;
+    height: 369px;
+    margin-top: 42px;
+}
+
+/* footer 부분 */
+.footer{
+    width: 100%;
+    height: 200px;
+}
+.companyInfo{
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+}
+.companyInfo>ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 20px;
+}
+.companyInfo li>a:hover{
+    color: red;
+}
+.symbols{
+    margin-left: 18px;
+}
+.companyAddress>span{
+   line-height: 28px;
+   letter-spacing: 1px;
+   margin-left: 20px;
+   font-size: 0.8rem;
+}

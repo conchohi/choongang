@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>책마을 책세상</title>
+        <!-- css, font 외부파일 -->
+        <link rel="stylesheet" href="./css/basic.css" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <!-- 파비콘 삽입 -->
+        <link rel="icon" href="./images/favicon01.png" type="images/jpg" />
+        <!-- 자바스크립트 외부 파일 가져올 때 -->
+        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+        <script src=""></script>
+        <style>
+            body{
+                font-family: "Gothic A1", sans-serif;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!-- 전체를 감싸는 상자 -->
+        <div class="wrap">
+            <!-- 위쪽 부분, logo, 로그인..., 메뉴... -->
+            <div class="topContainer">
+                <!-- 로고, 책마을 책세상 -->
+                <div class="topLogo">
+                    <a href="./index.html" class="logo">
+                        <img src="./images/logo.jpg" alt="로고">
+                        <h1>책마을 책세상</h1>
+                    </a>
+
+                    <!-- 로그인, 회원가입, 사이트맵 -->
+                    <nav class="topNav">
+                        <ul>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- 회사 소개, 프로그램, 열린공간 ...-->
+                <nav class="mainNav">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">프로그램</a></li>
+                        <li><a href="#">열린공간</a></li>
+                        <li><a href="#">동아리 모임</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">자료실</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr>
+            <!-- 검색 부분 -->
+            <div class="search">
+                <h2>책마을 책세상 통합검색</h2>
+                <form action="" method="get" name="search">
+                    <div>
+                        <input type="radio" name="dataSearch" value="data1" checked><span>자료검색</span>
+                        <input type="radio" name="dataSearch" value="data2"><span>강좌검색</span>
+                    </div>
+                    <input type="text" name="textSearch" placeholder="검색할 내용을 입력하세요">
+                    <button>검색</button>
+                </form>
+            </div>
+            <!-- 배너 -->
+            <div class="banner">
+                <img src="./images/myth.jpg" alt="배너 사진">
+            </div>
+            <!-- 코스 설명 부분, 글쓰기 교실... -->
+            <div class="courseInfo">
+                <a href="#"><img src="./images/indexpage_1.jpg" alt="글쓰기 교실"></a>
+                <a href="#"><img src="./images/indexpage_2.jpg" alt="독서 교실"></a>
+                <a href="#"><img src="./images/indexpage_3.jpg" alt="동아리 모임"></a>
+                <a href="#"><img src="./images/indexpage_4.jpg" alt="문화 공간"></a>
+            </div>
+            <!-- tab 메뉴 부분, 공지사항..., 책 소개 -->
+            <div class="mainInfo">
+                <!-- 탭 부분 -->
+                <div class="tabMenu">
+                    <div class="tabTitle">
+                        <button class="tablinks">공지사항</button>
+                        <button class="tablinks">문화행사</button>
+                        <button class="tablinks">책바다</button>
+                    </div>
+                    <!-- 공지사항 -->
+                    <div id="inform1" class="tabPage tablinkInit">
+                        <h3>공지사항</h3><br>
+                        <p>▶ 2022년 하반기 강좌 안내 <br><br>
+                            ▶ [학부모 교육] '기질로 보는 동기를 높이는 학습'...</p>     
+                    </div>
+                    <!-- 문화행사 -->
+                    <div id="inform2" class="tabPage">
+                        <h3>문화행사</h3>
+                        <p>행복한 시간....</p> 
+                    </div>
+                    <!-- 책바다 -->
+                    <div id="inform3" class="tabPage">
+                        <h3>책바다</h3>
+                        <p>기쁜 시간....</p>
+                    </div>
+                </div>
+                <!-- 이미지 부분, 책소개-->
+                <div class="bookInfo">
+                    <img src="../images/cola.png">
+                </div>
+            </div>
+            <!-- footer 부분, 정보공개,.....  회사 주소 -->
+            <footer class="footer">
+                <nav class="companyInfo">
+                    <ul>
+                        <li><a href="#">이메일무단수집거부<span class="symbols">|</span></a></li>                        <li><a href="#">정보공개알림<span class="symbols">|</span></a></li>
+                        <li><a href="#">개인정보처리방침<span class="symbols">|</span></a></li>
+                        <li><a href="#">이용서비스현황<span class="symbols">|</span></a></li>
+                        <li><a href="#">이용규정<span class="symbols">|</span></a></li>
+                        <li><a href="#">전화번호안내<span class="symbols">|</span></a></li>
+                        <li><a href="#">오시는 길</a></li>
+                     </ul>
+                </nav>
+                <div class="companyAddress">
+                    <span>(우)06220 서울시 강남구 테헤란로(강남) 대표전화:02-1234-1234 / 팩스번호: 02-1234-4567</span><br>
+                    <span>Copyright&copy;2023 책마을책세상 All Right Reserved</span>
+                </div>
+            </footer>
+    
+        </div>
+    </body>
+
+</html>
